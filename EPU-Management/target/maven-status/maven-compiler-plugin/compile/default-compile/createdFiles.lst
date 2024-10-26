@@ -1,0 +1,8 @@
+Epi\USe\EPU\Management\Controller\EmployeeService.class
+Epi\USe\EPU\Management\Controller\HierarchryService.class
+Epi\USe\EPU\Management\Controller\EmployeeController.class
+Epi\USe\EPU\Management\Model\EmployeeRepository.class
+Epi\USe\EPU\Management\EpuManagementApplication.class
+Epi\USe\EPU\Management\Model\EmployeeNode.class
+Epi\USe\EPU\Management\Model\Roles.class
+Epi\USe\EPU\Management\Model\Employee.class
