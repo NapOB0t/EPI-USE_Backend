@@ -6,7 +6,7 @@ WORKDIR /app
 
 # Copy the JAR file into the container
 # Ensure the JAR file path is correct relative to the build context
-COPY target/EPU-Management-0.0.1-SNAPSHOT.jar app.jar
+COPY EPU-Management/target/EPU-Management-0.0.1-SNAPSHOT.jar app.jar
 
 # Expose the port your application runs on
 EXPOSE 8081
