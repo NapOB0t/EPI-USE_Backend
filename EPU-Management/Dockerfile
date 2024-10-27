@@ -14,9 +14,8 @@
 ## Command to run your application
 #ENTRYPOINT ["java", "-jar", "app.jar"]
 
-
-# Step 1: Use an official Maven image with JDK 21 to build the application
-FROM maven:3.8.7-openjdk-21 AS build
+# Step 1: Use a Maven image with Java 21 to build the application
+FROM maven:3.9.4-eclipse-temurin-21 AS build
 WORKDIR /app
 
 # Copy the source code into the Docker image
@@ -26,8 +25,8 @@ COPY src ./src
 # Build the application
 RUN mvn clean package -DskipTests
 
-# Step 2: Use a smaller JRE image with JDK 21 to run the application
-FROM openjdk:21-jdk-slim
+# Step 2: Use a smaller JDK 21 image to run the application
+FROM eclipse-temurin:21-jdk
 WORKDIR /app
 
 # Copy the built .jar file from the previous stage
@@ -38,5 +37,4 @@ EXPOSE 8080
 
 # Command to run the application
 ENTRYPOINT ["java", "-jar", "app.jar"]
-
 
